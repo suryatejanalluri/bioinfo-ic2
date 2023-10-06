@@ -21,6 +21,10 @@ def generate_matrix(num_rows, num_cols):
     X = np.random.randint(lowest_int_num, highest_int_num, num_of_nums_to_generate). reshape(num_rows, num_cols)
     return X
 
+# Create a Pandas dataframe
+
+COLS = ["Matrix size", "Run time"]
+
 for matrix_size in range(10, 100, 10):
     A = generate_matrix(matrix_size, matrix_size)
     B = generate_matrix(matrix_size, matrix_size)
@@ -28,3 +32,5 @@ for matrix_size in range(10, 100, 10):
     matrix_multiplication(A, B)
     MM_stop_time = datetime.now()
     MM_time = float((MM_stop_time - MM_start_time).total_seconds())
+
+
